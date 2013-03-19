@@ -1,8 +1,5 @@
 .DS_Store
 
-# Ignore non-code related site resources
-resources/*
-
 # Ignore CodeKit processed files
 styles.css
 *-ck.js
