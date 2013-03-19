@@ -1,0 +1,55 @@
+/* MIXINS
+================= */
+
+@mixin vertical_gradient($top_color, $bottom_color) { 
+  background: $bottom_color;
+  background: -moz-linear-gradient(top, $top_color 0%, $bottom_color 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top_color), color-stop(100%,$bottom_color));
+  background: -webkit-linear-gradient(top, $top_color 0%,$bottom_color 100%);
+  background: -o-linear-gradient(top, $top_color 0%,$bottom_color 100%);
+  background: -ms-linear-gradient(top, $top_color 0%,$bottom_color 100%);
+}
+
+@mixin box_shadow($x, $y, $blur, $color){
+  -moz-box-shadow: $x $y $blur $color;
+  -webkit-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin box_shadow_inset($x, $y, $blur, $color){
+  -moz-box-shadow: inset $x $y $blur $color;
+  -webkit-box-shadow: inset $x $y $blur $color;
+  box-shadow: inset $x $y $blur $color;
+}
+
+@mixin ir{ display: block; text-indent: -999em; overflow: hidden; }
+
+@mixin hide { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+@mixin reset{ margin: 0; padding:0; border: 0; list-style: none; }
+
+@mixin horizontal_list { list-style: none; margin: 0; padding: 0; 
+  li { list-style: none; float: left; margin: 0; padding: 0; }
+}
+
+@mixin vertical_list { list-style: none; margin: 0; padding: 0; 
+  li { list-style: none; margin: 0; padding: 0; }
+}
+
+@mixin clearfix { zoom: 1;
+  &:before { content: ""; display: table; }
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin prefixer ($property, $value,
+                 $webkit: true,
+                    $moz: true,
+                     $ms: false,
+                      $o: false,
+                   $spec: true) {
+  @if $webkit { -webkit-#{$property}: $value; }
+  @if $moz    {    -moz-#{$property}: $value; }
+  @if $ms     {     -ms-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
+  @if $spec   {         #{$property}: $value; }
+}

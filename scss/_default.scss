@@ -1,0 +1,26 @@
+/*=======
+Stylesheet by Chris Johnson 
+http://chrisltd.com
+=======*/
+
+/* BASE
+================= */
+
+body { overflow-y: scroll; }
+
+a img { border: none; }
+
+/* LAYOUT
+================= */
+
+header, [role="main"], footer { text-align: center; }
+
+.container { max-width: $max_width; margin: 0 auto; text-align: left; }
+
+
+/* MODULES
+================= */
+
+.hr { display: block; height: 1px; width: 100%; background: #000; margin: 1em 0; }
+
+.horizontal_list { @include horizontal_list; }

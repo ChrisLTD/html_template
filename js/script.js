@@ -1,6 +1,6 @@
 // Script by Chris Johnson 
 // http://chrisltd.com
-// Created January 2012
+// Created October 2012
 
 $(function(){
   

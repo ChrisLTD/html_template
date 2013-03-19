@@ -1,0 +1,31 @@
+.hide { @include hide; }
+
+.desktop_only { display: none; }
+
+.remove { display: none; }
+
+.reset { margin: 0; padding:0; border: 0; list-style: none; }
+
+.floatright { float: right; } 
+
+.floatleft { float: left;  } 
+
+.alignright { float: right; margin: 0 0 10px 10px; } 
+
+.alignleft { float: left; margin: 0 10px 10px 0; } 
+
+.textcenter { text-align: center; }
+
+.textright { text-align: right; }
+
+.textleft { text-align: left; }
+
+.sans { font-family: $sans; }
+
+.serif { font-family: $serif; }
+
+.ir { @include ir; }
+
+.clearboth { clear: both; } 
+
+.clearfix { @include clearfix; }
