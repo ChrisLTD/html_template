@@ -1,6 +1,8 @@
 .hide { @include hide; }
 
-.desktop_only { display: none; }
+.desktop_only { display: none; 
+	@include respond-to("tablet"){ display: block; }
+}
 
 .remove { display: none; }
 
