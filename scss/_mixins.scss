@@ -37,7 +37,7 @@
 }
 
 @mixin centered_list { list-style: none; margin: 0; padding: 0; text-align: center;
-  li { list-style: none; margin: 0; padding: 0; display: inline-block; }
+  li { vertical-align: top; list-style: none; margin: 0; padding: 0; display: inline-block; }
 }
 
 @mixin clearfix { zoom: 1;
