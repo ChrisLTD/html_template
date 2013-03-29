@@ -31,3 +31,9 @@
 .clearboth { clear: both; } 
 
 .clearfix { @include clearfix; }
+
+@include respond-to("tablet"){ 
+  .two_col_text { @include prefixer(column-count, 2); }
+  .three_col_text { @include prefixer(column-count, 3); }
+  .four_col_text { @include prefixer(column-count, 4); }
+}
