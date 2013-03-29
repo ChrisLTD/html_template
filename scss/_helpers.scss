@@ -37,3 +37,5 @@
   .three_col_text { @include prefixer(column-count, 3); }
   .four_col_text { @include prefixer(column-count, 4); }
 }
+
+.full_width { width: 100%; }
