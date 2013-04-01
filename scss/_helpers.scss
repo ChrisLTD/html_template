@@ -26,6 +26,8 @@
 
 .serif { font-family: $serif; }
 
+.caps { text-transform: uppercase; letter-spacing: 1px; }
+
 .ir { @include ir; }
 
 .clearboth { clear: both; } 
