@@ -24,7 +24,7 @@
 
 @mixin ir{ display: block; text-indent: -999em; overflow: hidden; }
 
-@mixin hide { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+@mixin hide { text-indent: 100%; white-space: nowrap; overflow: hidden; height: 0; margin: 0; padding: 0; }
 
 @mixin reset{ margin: 0; padding:0; border: 0; list-style: none; }
 
