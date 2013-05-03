@@ -79,7 +79,7 @@
                   only screen and (                min-resolution: 2dppx) {
     & {
       background-image: url($file + '@2x.' + $type);
-      -webkit-background-size: $width $height;
+      @include prefixer(background-size, $width $height);
     }
   }
 }
