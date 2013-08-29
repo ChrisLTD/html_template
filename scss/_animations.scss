@@ -3,5 +3,5 @@
 }
 
 .trans-all {
-	@include prefixer(transition, all 0.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) );
+	@include prefixer(transition, all 0.2s ease-in-out );
 }
