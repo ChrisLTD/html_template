@@ -45,3 +45,7 @@
 }
 
 .full_width { width: 100%; }
+
+@media print {
+  .print_hide { display: none; }
+}
