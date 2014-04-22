@@ -6,6 +6,8 @@ http://chrisltd.com
 /* BASE
 ================= */
 
+*, *:before, *:after { @include prefixer(box-sizing, border-box); }
+
 body { overflow-y: scroll; background: $bg_color; color: $text_color; }
 
 a img { border: none; }
