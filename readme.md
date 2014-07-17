@@ -1,12 +1,38 @@
 # Chris Johnson's HTML Project Template
-### Version 2.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 2.1 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
-This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with Bryan Jones's brilliant [CodeKit App](http://incident57.com/codekit/) for converting and merging SCSS files into a single `styles.css` stylesheet as well as minifying javascript into a `filename-ck.js` files. It should work equally well with any other SASS/SCSS processor as long as they are set to compile `scss/styles.scss` into `css/styles.css`.
+This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass and CoffeeScript files.
 
 *Note: the gitignore file is set to ignore compiled css and javascript files.*
 
+## Getting Started
+
+### 1. Install gulp globally:
+
+```
+npm install -g gulp
+```
+
+### 2. Install gulp and gulp modules in your project devDependencies:
+
+```
+npm install --save-dev gulp
+npm install --save-dev gulp-sass
+npm install --save-dev gulp-coffee
+
+```
+
+### 3. Run gulp or gulp watch to compile your files:
+
+```
+gulp
+gulp watch
+
+```
+
 ## Credits
-* [CodeKit App](http://incident57.com/codekit/) 
+* [Gulp JS](http://gulpjs.com)
+* [CoffeeScript](http://coffeescript.org)
 * [SASS/SCSS](http://sass-lang.com)
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 * [Normalize.css](https://github.com/necolas/normalize.css/)

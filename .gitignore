@@ -1,6 +1,7 @@
 .DS_Store
 
-# Ignore CodeKit processed files
+# Ignore Gulp processed files
+
 styles.css
-*-ck.js
+script.js
 .sass-cache*
