@@ -19,7 +19,6 @@ npm install -g gulp
 npm install --save-dev gulp
 npm install --save-dev gulp-sass
 npm install --save-dev gulp-coffee
-
 ```
 
 ### 3. Run gulp or gulp watch to compile your files:
@@ -27,7 +26,6 @@ npm install --save-dev gulp-coffee
 ```
 gulp
 gulp watch
-
 ```
 
 ## Credits
