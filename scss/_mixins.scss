@@ -1,7 +1,7 @@
 /* MIXINS
 ================= */
 
-@mixin vertical_gradient($top_color, $bottom_color) { 
+@mixin vertical_gradient($top_color, $bottom_color) {
   background: $bottom_color;
   background: -moz-linear-gradient(top, $top_color 0%, $bottom_color 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top_color), color-stop(100%,$bottom_color));
@@ -28,11 +28,11 @@
 
 @mixin reset{ margin: 0; padding:0; border: 0; list-style: none; }
 
-@mixin horizontal_list { list-style: none; margin: 0; padding: 0; 
+@mixin horizontal_list { list-style: none; margin: 0; padding: 0;
   li { list-style: none; float: left; margin: 0; padding: 0; }
 }
 
-@mixin vertical_list { list-style: none; margin: 0; padding: 0; 
+@mixin vertical_list { list-style: none; margin: 0; padding: 0;
   li { list-style: none; margin: 0; padding: 0; }
 }
 
