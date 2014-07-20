@@ -9,7 +9,7 @@ var paths = {
 
 gulp.task('sass', function () {
   return gulp.src(paths.styles)
-    .pipe(sass())
+    .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest('css'));
 });
 
