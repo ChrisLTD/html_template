@@ -17,6 +17,7 @@ npm install -g gulp
 
 ```
 npm install --save-dev gulp
+npm install --save-dev gulp-plumber
 npm install --save-dev gulp-sass
 npm install --save-dev gulp-coffee
 ```
