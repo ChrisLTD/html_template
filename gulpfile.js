@@ -3,29 +3,34 @@ var plumber = require('gulp-plumber'); // used for error catching during watch
 var sass    = require("gulp-sass");
 var coffee  = require('gulp-coffee');
 
-var paths = {
+var sourcePaths = {
   styles:  ['scss/*.scss'],
   scripts: ['js/*.coffee']
 };
 
+var distPaths = {
+  styles:  'css',
+  scripts: 'js'
+};
+
 gulp.task('sass', function () {
-  gulp.src(paths.styles)
+  gulp.src(sourcePaths.styles)
     .pipe(plumber())
     .pipe(sass({errLogToConsole: true}))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest(distPaths.styles));
 });
 
 gulp.task('coffee', function () {
-  gulp.src(paths.scripts)
+  gulp.src(sourcePaths.scripts)
     .pipe(plumber())
     .pipe(coffee())
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest(distPaths.scripts));
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', function(){
-  gulp.watch(paths.styles, ['sass']);
-  gulp.watch(paths.scripts, ['coffee']);
+  gulp.watch(sourcePaths.styles, ['sass']);
+  gulp.watch(sourcePaths.scripts, ['coffee']);
 });
 
 // The default task (called when you run `gulp` from cli)
