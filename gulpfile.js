@@ -1,6 +1,7 @@
-var gulp   = require('gulp');
-var sass   = require("gulp-sass");
-var coffee = require('gulp-coffee');
+var gulp    = require('gulp');
+var plumber = require('gulp-plumber'); // used for error catching during watch
+var sass    = require("gulp-sass");
+var coffee  = require('gulp-coffee');
 
 var paths = {
   styles:  ['scss/*.scss'],
@@ -8,13 +9,15 @@ var paths = {
 };
 
 gulp.task('sass', function () {
-  return gulp.src(paths.styles)
+  gulp.src(paths.styles)
+    .pipe(plumber())
     .pipe(sass({errLogToConsole: true}))
     .pipe(gulp.dest('css'));
 });
 
 gulp.task('coffee', function () {
-  return gulp.src(paths.scripts)
+  gulp.src(paths.scripts)
+    .pipe(plumber())
     .pipe(coffee())
     .pipe(gulp.dest('js'));
 });
