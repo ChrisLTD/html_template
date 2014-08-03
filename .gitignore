@@ -1,8 +1,4 @@
 .DS_Store
 node_modules/
-
-# Ignore Gulp processed files
-
-styles.css
-script.js
 .sass-cache*
+resources/
