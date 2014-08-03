@@ -1,9 +1,7 @@
 # Chris Johnson's HTML Project Template
-### Version 2.1 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 2.2 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
-This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass and CoffeeScript files.
-
-*Note: the gitignore file is set to ignore compiled css and javascript files.*
+This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, CoffeeScript and [Swig](http://paularmstrong.github.io/swig/) files.
 
 ## Getting Started
 
@@ -13,24 +11,26 @@ This is the project template I start with when creating new website templates fr
 npm install -g gulp
 ```
 
-### 2. Install gulp and gulp modules in your project devDependencies:
+### 2. Install gulp and gulp modules:
 
 ```
-npm install --save-dev gulp
-npm install --save-dev gulp-plumber
-npm install --save-dev gulp-sass
-npm install --save-dev gulp-coffee
+npm install
 ```
 
-### 3. Run gulp or gulp watch to compile your files:
+### 3. Run gulp build to build your files:
+```
+gulp build
+```
+
+### 4. Run gulp to compile your files and start a local server with live reload:
 
 ```
 gulp
-gulp watch
 ```
 
 ## Credits
 * [Gulp JS](http://gulpjs.com)
+* [Swig](http://paularmstrong.github.io/swig/)
 * [CoffeeScript](http://coffeescript.org)
 * [SASS/SCSS](http://sass-lang.com)
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
