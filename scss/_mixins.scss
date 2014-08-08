@@ -41,7 +41,7 @@
 	.lt-ie8 & li { float: left; }
 }
 
-@mixin vertical-center { margin: auto; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+@mixin vertical-center { margin: auto; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 @mixin clearfix { zoom: 1;
   &:before { content: ""; display: table; }
