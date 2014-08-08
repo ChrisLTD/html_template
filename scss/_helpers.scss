@@ -30,6 +30,10 @@
 
 .ir { @include ir; }
 
+.vertical-center { @include vertical-center; }
+
+.relative { position: relative; }
+
 .clearboth { clear: both; }
 
 .clearfix { @include clearfix; }
