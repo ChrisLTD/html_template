@@ -26,7 +26,7 @@ var distPaths = {
 var server = {
   host: 'localhost',
   port: '8001'
-}
+};
 
 gulp.task('styles', function () {
   return gulp.src( sourcePaths.styles )
