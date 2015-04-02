@@ -65,8 +65,8 @@ gulp.task('templates', function() {
         cache: false
       }
     }))
-    .pipe(gulp.dest( distPaths.templates ))
-})
+    .pipe(gulp.dest( distPaths.templates ));
+});
 
 gulp.task('webserver', function() {
   return gulp.src( distPaths.templates )
