@@ -1,9 +1,21 @@
+// Fonts
 $sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 $serif: Georgia, 'Times New Roman', Times, serif;
+$title: $serif;
 
+// Math
 $max_width: 960px;
 $gutter: 20px;
 
+$margin-small: 1em;
+$margin-medium: $margin-small * 2;
+$margin-large: $margin-small * 3;
+
+$padding-small: 1em;
+$padding-medium: $padding-small * 2;
+$padding-large: $padding-small * 3;
+
+// Color
 $bg_color: #fff;
 $text_color: #000;
 $highlight_color: red;

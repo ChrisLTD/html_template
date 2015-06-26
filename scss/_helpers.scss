@@ -1,6 +1,6 @@
 .hide { @include hide; }
 
-.desktop_only { display: none;
+.desktop-only { display: none;
 	@include respond-to("tablet"){ display: block; }
 }
 
@@ -8,61 +8,57 @@
 
 .reset { margin: 0; padding:0; border: 0; list-style: none; }
 
-.floatright { float: right; }
+.float-right { float: right; }
+.float-left { float: left;  }
 
-.floatleft { float: left;  }
+.align-right { float: right; margin: 0 0 10px 10px; }
+.align-left { float: left; margin: 0 10px 10px 0; }
 
-.alignright { float: right; margin: 0 0 10px 10px; }
-
-.alignleft { float: left; margin: 0 10px 10px 0; }
-
-.textcenter { text-align: center; }
-
-.textright { text-align: right; }
-
-.textleft { text-align: left; }
-
-.pad-top { padding-top: 1em; }
-.pad-top-extra { padding-top: 2em; }
-.pad-top-max { padding-top: 3em; }
-
-.pad-bottom { padding-bottom: 1em; }
-.pad-bottom-extra { padding-bottom: 2em; }
-.pad-bottom-max { padding-bottom: 3em; }
-
-.pad-left { padding-left: 1em; }
-.pad-left-extra { padding-left: 2em; }
-.pad-left-max { padding-left: 3em; }
-
-.pad-right { padding-right: 1em; }
-.pad-right-extra { padding-right: 2em; }
-.pad-right-max { padding-right: 3em; }
-
-.margin-top { margin-top: 1em; }
-.margin-top-extra { margin-top: 2em; }
-.margin-top-max { margin-top: 3em; }
-
-.margin-bottom { margin-bottom: 1em; }
-.margin-bottom-extra { margin-bottom: 2em; }
-.margin-bottom-max { margin-bottom: 3em; }
-
-.margin-left { margin-left: 1em; }
-.margin-left-extra { margin-left: 2em; }
-.margin-left-max { margin-left: 3em; }
-
-.margin-right { margin-right: 1em; }
-.margin-right-extra { margin-right: 2em; }
-.margin-right-max { margin-right: 3em; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-justify { text-align: justify; }
 
 .text-larger { font-size: 1.2em; }
-
 .text-smaller { font-size: 0.8em; }
 
+.text-caps { text-transform: uppercase; letter-spacing: 1px; }
+
 .sans { font-family: $sans; }
-
 .serif { font-family: $serif; }
+.title { font-family: $title; }
 
-.caps { text-transform: uppercase; letter-spacing: 1px; }
+.pad-top { padding-top: $padding-small; }
+.pad-top-extra { padding-top: $padding-medium; }
+.pad-top-max { padding-top: $padding-large; }
+
+.pad-bottom { padding-bottom: $padding-small; }
+.pad-bottom-extra { padding-bottom: $padding-medium; }
+.pad-bottom-max { padding-bottom: $padding-large; }
+
+.pad-left { padding-left: $padding-small; }
+.pad-left-extra { padding-left: $padding-medium; }
+.pad-left-max { padding-left: $padding-large; }
+
+.pad-right { padding-right: $padding-small; }
+.pad-right-extra { padding-right: $padding-medium; }
+.pad-right-max { padding-right: $padding-large; }
+
+.margin-top { margin-top: $margin-small; }
+.margin-top-extra { margin-top: $margin-medium; }
+.margin-top-max { margin-top: $margin-large; }
+
+.margin-bottom { margin-bottom: $margin-small; }
+.margin-bottom-extra { margin-bottom: $margin-medium; }
+.margin-bottom-max { margin-bottom: $margin-large; }
+
+.margin-left { margin-left: $margin-small; }
+.margin-left-extra { margin-left: $margin-medium; }
+.margin-left-max { margin-left: $margin-large; }
+
+.margin-right { margin-right: $margin-small; }
+.margin-right-extra { margin-right: $margin-medium; }
+.margin-right-max { margin-right: $margin-large; }
 
 .ir { @include ir; }
 
@@ -70,7 +66,7 @@
 
 .relative { position: relative; }
 
-.clearboth { clear: both; }
+.clear-both { clear: both; }
 
 .clearfix { @include clearfix; }
 
