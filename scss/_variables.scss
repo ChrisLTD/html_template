@@ -1,6 +1,6 @@
 // Fonts
 $sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-$serif: Georgia, 'Times New Roman', Times, serif;
+i$serif: Georgia, 'Times New Roman', Times, serif;
 $title: $serif;
 
 // Math
@@ -17,5 +17,7 @@ $padding-large: $padding-small * 3;
 
 // Color
 $bg-color: #fff;
-$textcolor: #000;
-$highlight-color: red;
+$text-color: #333;
+$link-color: #6699cc;
+$highlight-color: #e00011;
+$gray: #999;

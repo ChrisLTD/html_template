@@ -8,7 +8,9 @@ http://chrisltd.com
 
 *, *:before, *:after { @include prefixer(box-sizing, border-box); }
 
-body { overflow-y: scroll; background: $bg-color; color: $text-color; }
+body { -webkit-font-smoothing: antialiased; overflow-y: scroll; background: $bg-color; color: $text-color; }
+
+a { color: $link-color; }
 
 img { max-width: 100%; }
 
@@ -21,10 +23,9 @@ header, [role="main"], footer { text-align: center; }
 
 .container { max-width: $max-width; margin: 0 auto; text-align: left; }
 
-
 /* MODULES
 ================= */
 
-.hr { display: block; height: 1px; width: 100%; background: #000; margin: 1em 0; }
+.hr { display: block; height: 1px; width: 100%; background: $gray; margin: 1em 0; }
 
 .horizontal-list { @include horizontal-list; }
