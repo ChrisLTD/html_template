@@ -1,22 +1,22 @@
 /* MIXINS
 ================= */
 
-@mixin vertical_gradient($top_color, $bottom_color) {
-  background: $bottom_color;
-  background: -moz-linear-gradient(top, $top_color 0%, $bottom_color 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top_color), color-stop(100%,$bottom_color));
-  background: -webkit-linear-gradient(top, $top_color 0%,$bottom_color 100%);
-  background: -o-linear-gradient(top, $top_color 0%,$bottom_color 100%);
-  background: -ms-linear-gradient(top, $top_color 0%,$bottom_color 100%);
+@mixin vertical-gradient($top-color, $bottom-color) {
+  background: $bottom-color;
+  background: -moz-linear-gradient(top, $top-color 0%, $bottom-color 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top-color), color-stop(100%,$bottom-color));
+  background: -webkit-linear-gradient(top, $top-color 0%,$bottom-color 100%);
+  background: -o-linear-gradient(top, $top-color 0%,$bottom-color 100%);
+  background: -ms-linear-gradient(top, $top-color 0%,$bottom-color 100%);
 }
 
-@mixin box_shadow($x, $y, $blur, $color){
+@mixin box-shadow($x, $y, $blur, $color){
   -moz-box-shadow: $x $y $blur $color;
   -webkit-box-shadow: $x $y $blur $color;
   box-shadow: $x $y $blur $color;
 }
 
-@mixin box_shadow_inset($x, $y, $blur, $color){
+@mixin box-shadow-inset($x, $y, $blur, $color){
   -moz-box-shadow: inset $x $y $blur $color;
   -webkit-box-shadow: inset $x $y $blur $color;
   box-shadow: inset $x $y $blur $color;
@@ -28,15 +28,15 @@
 
 @mixin reset{ margin: 0; padding:0; border: 0; list-style: none; }
 
-@mixin horizontal_list { list-style: none; margin: 0; padding: 0;
+@mixin horizontal-list { list-style: none; margin: 0; padding: 0;
   li { list-style: none; float: left; margin: 0; padding: 0; }
 }
 
-@mixin vertical_list { list-style: none; margin: 0; padding: 0;
+@mixin vertical-list { list-style: none; margin: 0; padding: 0;
   li { list-style: none; margin: 0; padding: 0; }
 }
 
-@mixin centered_list { list-style: none; margin: 0; padding: 0; text-align: center;
+@mixin centered-list { list-style: none; margin: 0; padding: 0; text-align: center;
   li { vertical-align: top; list-style: none; margin: 0; padding: 0; display: inline-block; }
 	.lt-ie8 & li { float: left; }
 }
