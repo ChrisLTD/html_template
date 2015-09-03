@@ -10,6 +10,15 @@
   background: -ms-linear-gradient(top, $top-color 0%,$bottom-color 100%);
 }
 
+@mixin horizontal_gradient($left_color, $right_color) {
+  background: $left_color;
+  background: -moz-linear-gradient(left, $left_color 0%, $right_color 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$left_color), color-stop(100%,$right_color));
+  background: -webkit-linear-gradient(left, $left_color 0%,$right_color 100%);
+  background: -o-linear-gradient(left, $left_color 0%,$right_color 100%);
+  background: -ms-linear-gradient(left, $left_color 0%,$right_color 100%);
+}
+
 @mixin box-shadow($x, $y, $blur, $color){
   -moz-box-shadow: $x $y $blur $color;
   -webkit-box-shadow: $x $y $blur $color;
