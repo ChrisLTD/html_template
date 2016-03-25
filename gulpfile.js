@@ -1,20 +1,20 @@
-var gulp      = require('gulp');
-var plumber   = require('gulp-plumber'); // used for error catching during watch
-var sass      = require("gulp-sass");
-var coffee    = require('gulp-coffee');
-var swig      = require('gulp-swig');
-var webserver = require('gulp-webserver');
-var opn       = require('opn'); // for opening the browser
+const gulp      = require('gulp');
+const plumber   = require('gulp-plumber'); // used for error catching during watch
+const sass      = require("gulp-sass");
+const babel     = require('gulp-babel');
+const swig      = require('gulp-swig');
+const webserver = require('gulp-webserver');
+const opn       = require('opn'); // for opening the browser
 
-var sourcePaths = {
+const sourcePaths = {
   styles:    ['./scss/*.scss'],
-  scripts:   ['./coffee/*.coffee'],
+  scripts:   ['./js/*.js'],
   images:    ['./img/**/*'],
   templates: ['./templates/**/*.html'],
   raw:       ['./raw/**/*']
 };
 
-var distPaths = {
+const distPaths = {
   styles:    './dist/css',
   scripts:   './dist/js',
   images:    './dist/img',
@@ -22,7 +22,7 @@ var distPaths = {
   raw:       './dist',
 };
 
-var server = {
+const server = {
   host: 'localhost',
   port: '8001'
 };
@@ -37,7 +37,9 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
   return gulp.src( sourcePaths.scripts )
     .pipe(plumber())
-    .pipe(coffee())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe(gulp.dest( distPaths.scripts ));
 });
 
