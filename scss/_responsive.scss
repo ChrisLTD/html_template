@@ -36,18 +36,18 @@
       @content;
     }
   }
-  @if $device == tablet-large-landscape {
-    @media only screen and (min-width: 768px) and (orientation: landscape) {
-      @content;
-    }
-  }
   @if $device == tablet-large-portrait {
     @media only screen and (min-width: 768px) and (orientation: portrait) {
       @content;
     }
   }
+  @if $device == tablet-large-landscape {
+    @media only screen and (min-width: 992px) and (orientation: landscape) {
+      @content;
+    }
+  }
   @if $device == desktop {
-    @media only screen and (min-width: 1224px) {
+    @media only screen and (min-width: 1200px) {
       @content;
     }
   }
