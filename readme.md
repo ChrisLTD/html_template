@@ -1,7 +1,7 @@
 # Chris Johnson's HTML Project Template
-### Version 2.2 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 3.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
-This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, CoffeeScript and [Swig](http://paularmstrong.github.io/swig/) files.
+This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, ES6 and [Swig](http://paularmstrong.github.io/swig/) files.
 
 ## Getting Started
 
@@ -31,7 +31,6 @@ gulp
 ## Credits
 * [Gulp JS](http://gulpjs.com)
 * [Swig](http://paularmstrong.github.io/swig/)
-* [CoffeeScript](http://coffeescript.org)
 * [SASS/SCSS](http://sass-lang.com)
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 * [Normalize.css](https://github.com/necolas/normalize.css/)
