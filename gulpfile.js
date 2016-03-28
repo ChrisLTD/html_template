@@ -43,11 +43,15 @@ gulp.task('scripts', function () {
   // set up the browserify instance on a task basis
   var b = browserify({
     entries: sourcePaths.scriptName,
-    // basedir: sourcePaths.scriptPath,
-    debug: false
+    debug: false // switch to true for sourcemaps
   });
 
-  return b.transform(babelify, {presets: ['es2015']})
+  return b.transform(babelify, {
+    presets: [
+        // 'react', // uncomment to enable reactifying & jsx
+        'es2015'
+      ]
+    })
     .bundle()
     .pipe(plumber())
     .pipe(source(distPaths.scriptName))
