@@ -1,25 +1,30 @@
-const gulp      = require('gulp');
-const plumber   = require('gulp-plumber'); // used for error catching during watch
-const sass      = require("gulp-sass");
-const babel     = require('gulp-babel');
-const swig      = require('gulp-swig');
-const webserver = require('gulp-webserver');
-const opn       = require('opn'); // for opening the browser
+const gulp       = require('gulp');
+const plumber    = require('gulp-plumber'); // used for error catching during watch
+const sass       = require("gulp-sass");
+const browserify = require('browserify');
+const babelify   = require('babelify');
+const source     = require('vinyl-source-stream');
+const swig       = require('gulp-swig');
+const connect    = require('gulp-connect');
+const opn        = require('opn'); // for opening the browser
 
 const sourcePaths = {
-  styles:    ['./scss/*.scss'],
-  scripts:   ['./js/*.js'],
-  images:    ['./img/**/*'],
-  templates: ['./templates/**/*.html'],
-  raw:       ['./raw/**/*']
+  styles:     ['./src/scss/*.scss'],
+  scriptName: './src/js/script.js',
+  scriptPath: './src/js/',
+  scripts:    './src/js/*.js',
+  images:     ['./src/img/**/*'],
+  templates:  ['./src/*.html'],
+  raw:        ['./src/raw/**/*']
 };
 
 const distPaths = {
-  styles:    './dist/css',
-  scripts:   './dist/js',
-  images:    './dist/img',
-  templates: './dist',
-  raw:       './dist',
+  styles:     './dist/css',
+  scripts:    './dist/js',
+  scriptName: 'script.js',
+  images:     './dist/img',
+  templates:  './dist',
+  raw:        './dist',
 };
 
 const server = {
@@ -35,12 +40,18 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src( sourcePaths.scripts )
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: sourcePaths.scriptName,
+    // basedir: sourcePaths.scriptPath,
+    debug: false
+  });
+
+  return b.transform(babelify, {presets: ['es2015']})
+    .bundle()
     .pipe(plumber())
-    .pipe(babel({
-      presets: ['es2015']
-    }))
-    .pipe(gulp.dest( distPaths.scripts ));
+    .pipe(source(distPaths.scriptName))
+    .pipe(gulp.dest(distPaths.scripts));
 });
 
 gulp.task('images', function () {
@@ -65,13 +76,11 @@ gulp.task('templates', function() {
 });
 
 gulp.task('webserver', function() {
-  return gulp.src( distPaths.templates )
-    .pipe(webserver({
-      host:             server.host,
-      port:             server.port,
-      livereload:       true,
-      directoryListing: false
-    }));
+  connect.server({
+    root: distPaths.templates,
+    port: server.port,
+    livereload: false
+  });
 });
 
 gulp.task('openbrowser', function() {
