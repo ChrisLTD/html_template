@@ -5,16 +5,18 @@ This is the project template I start with when creating new website templates fr
 
 ## Getting Started
 
-### 1. Install gulp globally:
+### 1. Install gulp and bower globally:
 
 ```
 npm install -g gulp
+npm install -g bower
 ```
 
-### 2. Install gulp and gulp modules:
+### 2. Install node and bower modules:
 
 ```
 npm install
+bower install
 ```
 
 ### 3. Run gulp build to build your files:
@@ -30,6 +32,7 @@ gulp
 
 ## Credits
 * [Gulp JS](http://gulpjs.com)
+* [Bower](http://bower.io)
 * [Swig](http://paularmstrong.github.io/swig/)
 * [SASS/SCSS](http://sass-lang.com)
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
