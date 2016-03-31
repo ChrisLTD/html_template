@@ -1,0 +1,20 @@
+{
+  "name": "html_template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ChrisLTD/html_template",
+  "authors": [
+    "Chris Johnson <chrisltd@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1",
+    "html5shiv": "3.7.2"
+  }
+}
