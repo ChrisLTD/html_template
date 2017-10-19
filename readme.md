@@ -1,5 +1,5 @@
 # Chris Johnson's HTML Project Template
-### Version 3.1 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 3.1.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
 This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, ES6 and [Swig](http://paularmstrong.github.io/swig/) files.
 
