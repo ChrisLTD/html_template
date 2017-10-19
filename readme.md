@@ -1,33 +1,31 @@
 # Chris Johnson's HTML Project Template
-### Version 3.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 3.1 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
 This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, ES6 and [Swig](http://paularmstrong.github.io/swig/) files.
 
 ## Getting Started
 
-### 1. Install gulp and bower globally:
+### 1. Install yarn through [Homebrew](https://brew.sh/)
 
 ```
-npm install -g gulp
-npm install -g bower
+brew install yarn
 ```
 
 ### 2. Install node and bower modules:
 
 ```
-npm install
-bower install
+yarn install
 ```
 
 ### 3. Run gulp build to build your files:
 ```
-gulp build
+yarn build
 ```
 
 ### 4. Run gulp to compile your files and start a local server with live reload:
 
 ```
-gulp
+yarn dev
 ```
 
 ## Credits

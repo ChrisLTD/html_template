@@ -5,3 +5,4 @@ src/bower_components/*
 resources/
 dist/
 .idea
+dandelion.yml
