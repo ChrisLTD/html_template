@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{% block title %}Default Title{% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width">
+
+  <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  {% block head %}{% endblock %}
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <header class="header">
+
+      <div class="container">
+
+        {% block header %}
+          <h1>Header</h1>
+        {% endblock %}
+
+      </div><!--/.container-->
+
+    </header><!-- /.header -->
+
+    <div role="main" class="content">
+      <div class="container">
+
+        {% block main %}
+          <p>Main</p>
+        {% endblock %}
+
+      </div><!--/.container-->
+    </div><!-- /.main -->
+
+    <footer class="footer">
+      <div class="container">
+
+        {% block footer %}
+          <h2>Footer</h2>
+        {% endblock %}
+
+      </div><!--/.container-->
+    </footer><!--/.footer-->
+
+  </div> <!-- /#wrapper -->
+
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+  {% block scripts %}{% endblock %}
+
+  {% include "partials/analytics.html" %}
+
+</body>
+</html>

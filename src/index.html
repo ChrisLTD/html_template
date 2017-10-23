@@ -1,51 +1,7 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
+{% extends "_base.html" %}
 
-  <title></title>
+{% block title %}Index{% endblock %}
 
-  <meta name="viewport" content="width=device-width">
-
-  <!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
-  <![endif]-->
-
-  <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-<body>
-
-  <div id="wrapper">
-
-    <header class="header">
-      <div class="container">
-
-      </div><!--/.container-->
-    </header><!-- /.header -->
-
-    <div role="main" class="main">
-      <div class="container">
-
-      </div><!--/.container-->
-    </div><!-- /.main -->
-
-    <footer class="footer">
-      <div class="container">
-
-      </div><!--/.container-->
-    </footer><!--/.footer-->
-
-  </div> <!-- /#wrapper -->
-
-  <script src="bower_components/jquery/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-
-  {% include "partials/analytics.html" %}
-
-</body>
-</html>
+{% block main %}
+  <p>Index content.</p>
+{% endblock %}
