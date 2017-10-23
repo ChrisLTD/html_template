@@ -38,6 +38,7 @@ gulp.task('styles', function () {
   return gulp.src( sourcePaths.styles )
     .pipe(plumber())
     .pipe(sass({ errLogToConsole: true }))
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.styles ));
 });
 
@@ -56,22 +57,26 @@ gulp.task('scripts', function () {
     })
     .bundle()
     .pipe(plumber())
+    .pipe(connect.reload())
     .pipe(source(distPaths.scriptName))
     .pipe(gulp.dest(distPaths.scripts));
 });
 
 gulp.task('images', function () {
   return gulp.src( sourcePaths.images )
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.images ));
 });
 
 gulp.task('raw', function () {
   return gulp.src(sourcePaths.raw)
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.raw ));
 });
 
 gulp.task('bower', function () {
   return gulp.src(sourcePaths.bower)
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.bower ));
 });
 
@@ -83,6 +88,7 @@ gulp.task('templates', function() {
         cache: false
       }
     }))
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.templates ));
 });
 
@@ -90,7 +96,7 @@ gulp.task('webserver', function() {
   connect.server({
     root: distPaths.templates,
     port: server.port,
-    livereload: false
+    livereload: true
   });
 });
 
