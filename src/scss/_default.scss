@@ -8,7 +8,8 @@ http://chrisltd.com
 
 *, *:before, *:after { @include prefixer(box-sizing, border-box); }
 
-body { -webkit-font-smoothing: antialiased; overflow-y: scroll; background: $bg-color; color: $text-color; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll; background: $bg-color; color: $text-color; }
 
 a { color: $link-color; }
 
