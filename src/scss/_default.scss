@@ -6,27 +6,59 @@ http://chrisltd.com
 /* BASE
 ================= */
 
-*, *:before, *:after { @include prefixer(box-sizing, border-box); }
+*, *:before, *:after { 
+  @include prefixer(box-sizing, border-box); 
+}
 
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll; background: $bg-color; color: $text-color; font-family: $sans; }
+body { 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll; 
+  background: $bg-color; 
+  color: $text-color; 
+  font-family: $sans; 
+}
 
-a { color: $link-color; }
+a { 
+  color: $link-color; 
 
-img { max-width: 100%; }
+  &:hover, &:active, &:visited {
+    color: darken($link-color, .2);
+  }
+}
 
-a img { border: none; }
+img { 
+  max-width: 100%; 
+}
+
+a img { 
+  border: none; 
+}
 
 /* LAYOUT
 ================= */
 
-.header, .main, .footer { text-align: center; }
+.header, .main, .footer { 
+  text-align: center; 
+}
 
-.container { max-width: $max-width; margin: 0 auto; text-align: left; }
+.container { 
+  max-width: $max-width; 
+  margin: 0 auto; 
+  text-align: left; 
+}
 
 /* MODULES
 ================= */
 
-.hr { display: block; height: 1px; width: 100%; background: $gray; margin: 1em 0; }
+.hr { 
+  display: block; 
+  height: 1px; 
+  width: 100%; 
+  background: $gray; 
+  margin: 1em 0; 
+}
 
-.horizontal-list { @include horizontal-list; }
+.horizontal-list { 
+  @include horizontal-list; 
+}
