@@ -9,7 +9,7 @@ http://chrisltd.com
 *, *:before, *:after { @include prefixer(box-sizing, border-box); }
 
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  overflow-y: scroll; background: $bg-color; color: $text-color; }
+  overflow-y: scroll; background: $bg-color; color: $text-color; font-family: $sans; }
 
 a { color: $link-color; }
 
@@ -20,7 +20,7 @@ a img { border: none; }
 /* LAYOUT
 ================= */
 
-header, [role="main"], footer { text-align: center; }
+.header, .main, .footer { text-align: center; }
 
 .container { max-width: $max-width; margin: 0 auto; text-align: left; }
 
