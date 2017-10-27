@@ -15,6 +15,7 @@ const sourcePaths = {
   scripts:    './src/js/*.js',
   images:     ['./src/img/**/*'],
   templates:  ['./src/*.html'],
+  partials:   ['./src/partials/*.html'],
   bower:      ['./src/bower_components/**/*'],
   raw:        ['./src/raw/**/*']
 };
@@ -110,6 +111,7 @@ gulp.task('watch', function(){
   gulp.watch(sourcePaths.scripts, ['scripts']);
   gulp.watch(sourcePaths.images, ['images']);
   gulp.watch(sourcePaths.templates, ['templates']);
+  gulp.watch(sourcePaths.partials, ['templates']);
   gulp.watch(sourcePaths.bower, ['bower']);
   gulp.watch(sourcePaths.raw, ['raw']);
 });
