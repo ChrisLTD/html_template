@@ -1,5 +1,5 @@
 // make it safe to use console.log always
-function consoleSafe() {
+export function consoleSafe() {
   (function (a) {
     function b() {
     }
@@ -18,4 +18,31 @@ function consoleSafe() {
   }());
 }
 
-export { consoleSafe }
+// Debounce http://davidwalsh.name/javascript-debounce-function
+export function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      }
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) {
+      func.apply(context, args);
+    }
+  };
+}
+
+// jQuery Smooth Scroll Helper
+export function smoothScrollTo($target){
+  if ($target.length) {
+    var scrollValue = $target.offset().top;
+    $('html,body').animate({ scrollTop: scrollValue }, 1000);
+    return false;
+  }
+}

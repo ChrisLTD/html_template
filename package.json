@@ -1,7 +1,7 @@
 {
   "name": "html_template",
   "version": "3.1.0",
-  "description": "This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass and CoffeeScript files.",
+  "description": "This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass and JS files.",
   "main": "gulpfile.js",
   "scripts": {
     "install": "yarn run bower install",
