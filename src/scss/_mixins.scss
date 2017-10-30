@@ -60,6 +60,14 @@
   &:after { content: ""; display: table; clear: both; }
 }
 
+@mixin placeholder-text {
+  ::-webkit-input-placeholder { @content; } // Chrome/Opera/Safari */
+  :-ms-input-placeholder { @content; } // IE 10+
+  ::-moz-placeholder { @content; } // Firefox 19+
+  :-moz-placeholder { @content; }  // Firefox 18-
+  :placeholder-shown { @content; }
+}
+
 @mixin prefixer ($property, $value,
                  $webkit: true,
                     $moz: true,
