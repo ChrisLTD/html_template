@@ -6,3 +6,4 @@ resources/
 dist/
 .idea
 dandelion.yml
+deploy.sh
