@@ -6,6 +6,7 @@ const babelify   = require('babelify');
 const source     = require('vinyl-source-stream');
 const swig       = require('gulp-swig');
 const connect    = require('gulp-connect');
+const uncache    = require('gulp-uncache');
 const opn        = require('opn'); // for opening the browser
 
 const sourcePaths = {
@@ -90,6 +91,7 @@ gulp.task('templates', function() {
       }
     }))
     .pipe(connect.reload())
+    .pipe(uncache())
     .pipe(gulp.dest( distPaths.templates ));
 });
 

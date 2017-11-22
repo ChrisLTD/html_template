@@ -30,6 +30,7 @@
     "gulp-plumber": "^0.6.6",
     "gulp-sass": "^2.2.0",
     "gulp-swig": "^0.7.4",
+    "gulp-uncache": "^0.4.0-beta1",
     "opn": "^1.0.2",
     "sass": "^0.5.0",
     "vinyl-source-stream": "^1.1.0"
