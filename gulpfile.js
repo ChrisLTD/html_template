@@ -90,8 +90,8 @@ gulp.task('templates', function() {
         cache: false
       }
     }))
-    .pipe(connect.reload())
     .pipe(uncache())
+    .pipe(connect.reload())
     .pipe(gulp.dest( distPaths.templates ));
 });
 
