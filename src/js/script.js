@@ -3,7 +3,7 @@
 // Script by Chris Johnson
 // http://chrisltd.com
 
-import { consoleSafe } from "./helpers.js";
+import { consoleSafe, smoothScrollTo } from "./helpers.js";
 
 (function($) {
 
