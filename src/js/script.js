@@ -9,7 +9,7 @@ import { consoleSafe, smoothScrollTo } from "./helpers.js";
 
   consoleSafe();
 
-  console.log('Hello World!');
+  console.log('init');
 
   // Smooth scrolling
   $('a[href*=#]:not([href=#])').click(function() {
