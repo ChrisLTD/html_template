@@ -27,6 +27,7 @@
     "gulp-connect": "^3.2.2",
     "gulp-plumber": "^0.6.6",
     "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-swig": "^0.7.4",
     "gulp-uncache": "^0.4.0-beta1",
     "jquery": "^3.4.0",

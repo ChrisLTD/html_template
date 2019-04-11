@@ -3,6 +3,7 @@ const plumber    = require('gulp-plumber'); // used for error catching during wa
 const sass       = require("gulp-sass");
 const browserify = require('browserify');
 const babelify   = require('babelify');
+const sourcemaps = require('gulp-sourcemaps');
 const source     = require('vinyl-source-stream');
 const swig       = require('gulp-swig');
 const connect    = require('gulp-connect');
@@ -37,8 +38,10 @@ const server = {
 gulp.task('styles', function () {
   return gulp.src( sourcePaths.styles )
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass({ errLogToConsole: true }))
     .pipe(connect.reload())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest( distPaths.styles ));
 });
 
