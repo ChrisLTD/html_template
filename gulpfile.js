@@ -5,6 +5,7 @@ const browserify = require('browserify');
 const babelify   = require('babelify');
 const sourcemaps = require('gulp-sourcemaps');
 const source     = require('vinyl-source-stream');
+const buffer     = require('vinyl-buffer');
 const swig       = require('gulp-swig');
 const connect    = require('gulp-connect');
 const uncache    = require('gulp-uncache');
@@ -49,19 +50,23 @@ gulp.task('scripts', function () {
   // set up the browserify instance on a task basis
   var b = browserify({
     entries: sourcePaths.scriptName,
-    debug: false // switch to true for sourcemaps
+    debug: true
   });
 
   return b.transform(babelify, {
     presets: [
         // 'react', // uncomment to enable reactifying & jsx
         'es2015'
-      ]
+      ],
+    sourceMaps: true
     })
     .bundle()
     .pipe(plumber())
     .pipe(connect.reload())
     .pipe(source(distPaths.scriptName))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(distPaths.scripts));
 });
 
