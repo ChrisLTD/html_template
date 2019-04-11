@@ -3,6 +3,7 @@
 // Script by Chris Johnson
 // http://chrisltd.com
 
+import $ from "jquery";
 import { consoleSafe, smoothScrollTo } from "./helpers.js";
 
 (function($) {
@@ -12,7 +13,7 @@ import { consoleSafe, smoothScrollTo } from "./helpers.js";
   console.log('init');
 
   // Smooth scrolling
-  $('a[href*=#]:not([href=#])').click(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
     console.log('smooth scroll!');
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
       var target = $(this.hash);
@@ -28,4 +29,4 @@ import { consoleSafe, smoothScrollTo } from "./helpers.js";
     $toggleTarget.toggleClass('active');
   });
 
-})(jQuery);
+})($);

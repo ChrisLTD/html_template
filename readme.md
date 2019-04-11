@@ -1,5 +1,5 @@
 # Chris Johnson's HTML Project Template
-### Version 3.1.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
+### Version 3.2.0 | By [Chris Johnson](http://chrisltd.com) | https://github.com/ChrisLTD/html_template
 
 This is the project template I start with when creating new website templates from scratch. It’s currently designed to work with [Gulp JS](http://gulpjs.com) for processing Sass, ES6 and [Swig](http://paularmstrong.github.io/swig/) files.
 
@@ -11,7 +11,7 @@ This is the project template I start with when creating new website templates fr
 brew install yarn
 ```
 
-### 2. Install node and bower modules:
+### 2. Install node modules:
 
 ```
 yarn install
@@ -30,7 +30,6 @@ yarn dev
 
 ## Credits
 * [Gulp JS](http://gulpjs.com)
-* [Bower](http://bower.io)
 * [Swig](http://paularmstrong.github.io/swig/)
 * [SASS/SCSS](http://sass-lang.com)
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)

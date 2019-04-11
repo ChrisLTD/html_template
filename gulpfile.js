@@ -17,7 +17,6 @@ const sourcePaths = {
   images:     ['./src/img/**/*'],
   templates:  ['./src/*.html'],
   partials:   ['./src/partials/*.html'],
-  bower:      ['./src/bower_components/**/*'],
   raw:        ['./src/raw/**/*']
 };
 
@@ -27,7 +26,6 @@ const distPaths = {
   scriptName: 'script.js',
   images:     './dist/img',
   templates:  './dist',
-  bower:      './dist/bower_components',
   raw:        './dist'
 };
 
@@ -76,12 +74,6 @@ gulp.task('raw', function () {
     .pipe(gulp.dest( distPaths.raw ));
 });
 
-gulp.task('bower', function () {
-  return gulp.src(sourcePaths.bower)
-    .pipe(connect.reload())
-    .pipe(gulp.dest( distPaths.bower ));
-});
-
 gulp.task('templates', function() {
   return gulp.src( sourcePaths.templates )
     .pipe(plumber())
@@ -114,11 +106,10 @@ gulp.task('watch', function(){
   gulp.watch(sourcePaths.images, ['images']);
   gulp.watch(sourcePaths.templates, ['templates']);
   gulp.watch(sourcePaths.partials, ['templates']);
-  gulp.watch(sourcePaths.bower, ['bower']);
   gulp.watch(sourcePaths.raw, ['raw']);
 });
 
-gulp.task('build', ['styles', 'scripts', 'images', 'templates', 'raw', 'bower']);
+gulp.task('build', ['styles', 'scripts', 'images', 'templates', 'raw']);
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['build', 'watch', 'webserver', 'openbrowser']);
