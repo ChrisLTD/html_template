@@ -62,12 +62,12 @@ gulp.task('scripts', function () {
     })
     .bundle()
     .pipe(plumber())
-    .pipe(connect.reload())
     .pipe(source(distPaths.scriptName))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(distPaths.scripts));
+    .pipe(gulp.dest(distPaths.scripts))
+    .pipe(connect.reload());
 });
 
 gulp.task('images', function () {
